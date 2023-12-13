@@ -47,18 +47,3 @@ kops create cluster \
 
 
 kops delete cluster --name kube.com --yes
-
-kops get cluster
-
-kops update cluster --name jenkinstraining.com --yes --admin
-
-kops validate cluster --wait 10m
-
-
-ssh -i ~/.ssh/id_rsa ubuntu@api.jenkinstraining.com
-
-kops delete cluster  --yes
-
-
-nginx controller installation
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.0/deploy/static/provider/aws/deploy.yaml
