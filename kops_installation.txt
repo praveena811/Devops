@@ -20,7 +20,7 @@ sudo mv ./kubectl /usr/bin/kubectl
 
 aws s3 mb s3://dev1665 --region ap-south-1
 
-Create private hosted zone in AWS Route53
+Create private hosted zone in AWS Route53(kube.com)
 
 export KOPS_CLUSTER_NAME=kube.com
 export KOPS_STATE_STORE=s3://mybucketkube
@@ -44,6 +44,9 @@ kops create cluster \
 --name=${KOPS_CLUSTER_NAME} \
 --dns private \
 --control-plane-count 1
+
+
+kops delete cluster --name kube.com --yes
 
 kops get cluster
 
