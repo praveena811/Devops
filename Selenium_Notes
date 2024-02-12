@@ -1,4 +1,5 @@
 How to Install Selenium:
+=========================
 Open Eclipse
 Go to Help -> Eclipse Marketplace
 Search by Maven
@@ -17,3 +18,39 @@ Finally,
     </dependency>
 
 Download the selenium Jars-->Add in the Eclipse Properties--->Libraries-->Add External Jars-->
+
+Running in different browsers:
+==================================
+1)WebDriver driver = new FirefoxDriver(); 
+driver.get("http://google.com");
+System.out.println(driver.getTitle());
+driver.close();
+2) System.setProperty("webdriver.chrome.driver", "E:\\drivers\\ChromeDrivers\\85\\chromedriver.exe");
+ WebDriver driver=new ChromeDriver();
+
+Webdriver Commands:
+==================
+Getting a webpage-->driver.get("http://google.com");
+                  -->driver.navigate().to("https://javatpoint.com/selenium-tutorial");
+Locating forms and sending user inputs-->driver.findElement(By.id("lst-ib")).sendKeys("javatpoint tutorials");  
+Clearing UserInputs-->driver.findElement(By.name("q")).clear();  
+Fetching data over webelement-->driver.findElement(By.id("element567")).getText();  
+Click-->driver.findElement(By.id("btnK")).click();  
+Navigate back/forward-->driver.navigate().back();  ,driver.navigate().forward();
+Close/Quit-->driver.close();  
+Moving between windows-->driver.switchTo().window("windowName");  
+Moving between frames-->driver.switchTo().frame("frameName");  
+Drag and Drop-->
+WebElement element = driver.findElement(By.name("source"));  
+WebElement target = driver.findElement(By.name("target"));  
+(new Actions(driver)).dragAndDrop(element, target).perform(); 
+
+Dropdown:
+Select dropdown = new Select(driver.findElement(By.id("testingDropdown")));  
+    dropdown.selectByVisibleText("Automation Testing");  
+
+
+
+
+
+
