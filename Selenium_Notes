@@ -1,0 +1,19 @@
+How to Install Selenium:
+Open Eclipse
+Go to Help -> Eclipse Marketplace
+Search by Maven
+Click "Install" button at "Maven Integration for Eclipse" section
+Follow the instruction step by step
+After successful installation do the followings in Eclipse:
+Go to Window --> Preferences
+Observe, Maven is enlisted at left panel
+Finally,
+-->Create a Maven Project and in Pom .xml update the dependencies
+<dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
+      <scope>test</scope>
+    </dependency>
+
+Download the selenium Jars-->Add in the Eclipse Properties--->Libraries-->Add External Jars-->
